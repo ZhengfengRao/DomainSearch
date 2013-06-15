@@ -27,7 +27,7 @@ def whois(domain):
 		if data["type"] == "success":
 			if data["message"] == "NOT FOUND" or data["message"].find("No match for " + domain) >= 0:
 				print "**************** avaiable! **************";
-				output = open("avaiable.txt", 'w+');
+				output = open("avaiable.txt", 'a');
 				output.write(domain);
 				close(output);
 			else:
